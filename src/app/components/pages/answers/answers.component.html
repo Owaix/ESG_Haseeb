@@ -1,0 +1,60 @@
+<div class="answers-container" *ngIf="topicData; else errorTemplate">
+    <h1 style="text-align: center;"> {{ topicData.name }}</h1>
+    <div class="md-content" (swipeleft)="swipe(selectedIndex, $event.type)"
+        (swiperight)="swipe(selectedIndex, $event.type)">
+        <mat-tab-group mat-stretch-tabs [(selectedIndex)]="selectedIndex" (selectedIndexChange)="selectChange()">
+            <ng-container *ngFor="let tab of tabs">
+                <mat-tab [label]="tab.title" (swipeleft)="swipe(tab.id, $event.type)"
+                    (swiperight)="swipe(tab.id, $event.type)">
+                    <div class="content">
+                        <br>
+                        <br>
+                        <div (click)="openQuesion(subtopic.id)"
+                            *ngFor="let subtopic of topicData.subtopics ; let  i = index; let last = last"
+                            class="subtopic">
+                            <h3 style="text-decoration: underline;"> {{i+1}}. {{ subtopic.name }}</h3>
+                            <div ngClass="level{{question.level}}"
+                                *ngFor="let question of sortQuestions(subtopic.questions); let  j = index; let last = last"
+                                class="question">
+                                <p style="font-weight: 600;"><strong style="color: red;">Question {{j+1}}:</strong> {{
+                                    question.question }}</p>
+                                <p>
+                                    <strong>Answer:</strong>
+                                    <span [ngClass]="question.user_answer ? '' : 'label'" *ngIf="!isArray(question.user_answer)">{{ question.user_answer || 'No answer provided' }}</span>
+                                <ul style="list-style-type: none;" *ngIf="isArray(question.user_answer)">                                    
+                                    <li *ngFor="let answer of question.user_answer">
+                                        <img style="width: 20px;" 
+                                        [src]="question.type == 'cm' ? '../../../../assets/images/check.png' :  ''"
+                                        src="../../../../assets/images/check.png" alt="check">
+                                        {{ answer.answer }}</li>
+                                </ul>
+                            </div>
+                            <div *ngIf="subtopic.questions.length == 0">
+                                <label>No question answered</label>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div style="text-align: center;">
+                            <button (click)="edit(tab.id)" class="btn">Edit</button>
+                            <p style="font-weight: bold;color: red;">Please further check on your responses to each of
+                                the material topics befoe submit for report generation</p>
+                            <button (click)="generate_report()" class="btn">Generate Report</button>
+                        </div>
+                        <div style="height: 200px;">
+                        </div>
+                    </div>
+                </mat-tab>
+            </ng-container>
+        </mat-tab-group>
+    </div>
+</div>
+
+<ng-template #errorTemplate>
+    <p class="error-message">{{ errorMessage }}</p>
+</ng-template>
+
+<app-modal *ngIf="isModalOpen" [redirectUrl]="redirectUrl" [buttontitle]="buttontitle" [errortitle]="errortitle" (close)="closeModal()">
+    <h2>{{errortitle}}</h2>
+    <p style="font-size: 19px;">{{errormsg}}</p>
+</app-modal>

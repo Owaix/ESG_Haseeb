@@ -1,0 +1,19 @@
+<div class="email-verified-container">
+    <div class="verification-card">
+        <div class="icon">
+            <i [ngClass]="checkIconClass"></i>
+        </div>
+        <h1>{{ emailVerifiedMessage }}</h1>
+        <p>{{ thankYouMessage }}</p>
+        <p>{{ accountReadyMessage }}</p>
+
+        <div style="text-align: center;" class="additional-info">
+            <h1>{{ nextStepsTitle }}</h1>
+            <ul>
+                <li *ngFor="let step of nextSteps">{{ step }}</li>
+            </ul>
+        </div>
+        <br>
+        <button [ngStyle]="{ color: linkColor }" href="#" (click)="resendEmail()" class="links">{{ loginText }}</button>
+    </div>
+</div>

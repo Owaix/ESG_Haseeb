@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px; // Adjust as needed
+  margin: 0 auto; // Center the container horizontally
+  padding: 1rem;
+  margin-bottom: 10%;
+}
+
+.status-inline {
+  display: inline-flex;
+  /* or simply inline */
+  align-items: center;
+  /* Center align items vertically */
+}
+
+.status-inline img {
+  margin-right: 0.5rem;
+  /* Optional: Add space between the image and the text */
+}
+
+a {
+  text-decoration: none;
+}
+
+.responsive-div {
+  width: 90%; // Make each div take the full width of the container
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .topic-box {
+    flex: 2;
+
+    h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin: 0.2rem 0;
+      color: #555;
+    }
+  }
+
+  .status {
+    flex: 1;
+    text-align: center;
+
+    span {
+      color: #4caf50;
+      font-weight: bold;
+    }
+  }
+
+  .edit-button {
+    flex: 0.5;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #295263;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #115293;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: stretch;
+
+    .status,
+    .edit-button {
+      text-align: left;
+      margin-top: 0.5rem;
+    }
+  }
+}

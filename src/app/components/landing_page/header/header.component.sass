@@ -1,0 +1,147 @@
+img
+  &:hover
+    cursor: pointer
+
+  &:nth-child(2)
+    display: none
+
+  &:nth-child(3)
+    display: none
+
+.logo
+  width: 120px
+  height: 50px
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  background-image: url('/assets/images/logo2.png')
+
+.menu
+  display: none
+
+@media (max-width: 768px)
+  .logo
+    background-image: url('/assets/images/ESGbutton-22.png')
+  .menu
+    display: block
+
+nav
+  display: none // Hide by default
+
+  &.active
+    display: block // Show when active
+
+  a
+    text-decoration: none // Remove underline
+    color: inherit // Inherit color from parent
+    padding: 5px 20px 5px 20px
+
+nav
+  a
+    text-decoration: none
+    margin-inline: 1rem
+    color: #509787
+    font-size: 1rem
+    position: relative
+    font-weight: 600
+
+  a.links
+    background-color : #8ECCA5
+    color : white
+
+    &:before
+      content: ''
+      position: absolute
+      width: 0
+      left: 0
+      top: 2rem
+      height: 0.2rem
+      background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan))
+      transition: 0.5s
+
+    &:hover
+      color: #84c5be
+
+      &::before
+        width: 100%
+
+@media screen and (max-aspect-ratio: 1)
+  button
+    display: none
+
+  @media screen and (max-width: 767px)
+    img
+      &:nth-child(2)
+        display: block
+
+    nav
+      width: calc( 100% - 5rem )
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translate(-50%, -100%)
+      transition: 1s
+      opacity: 0
+      border-radius: 1rem
+      padding: 1rem
+      background-color: white
+
+      a
+        display: block
+        margin-block: 1rem
+        margin-inline: 0
+        text-align: center
+        color: var(--dark-blue)
+
+@media (min-width: 768px) and (max-width: 1024px)
+  nav
+    // 
+    
+
+.user-info
+  position: relative // Required for positioning the logout button
+  display: inline-flex // Use inline-flex to align items
+  align-items: center // Vertically center the items
+
+  .email
+    margin-right: 10px // Space between email and logout button
+    cursor: pointer // Pointer cursor
+
+  .logout
+    display: none // Hide by default
+    position: absolute // Position relative to the user-info
+    top: 100% // Position below the email
+    left: 0 // Align with the email
+    background-color: #f00 // Background color
+    color: #fff // Text color
+    border: none // Remove border
+    padding: 5px 10px // Padding
+    cursor: pointer // Pointer cursor
+    transition: opacity 0.3s ease // Smooth transition
+    z-index: 10 // Ensure it's above other content
+
+    &:hover
+      background-color: darken(#f00, 10%)
+
+  &:hover .logout
+    display: block 
+
+@media (min-width: 768px)
+  nav
+    display: flex 
+
+@media only screen and (min-width: 1099px) and (max-width: 1266px) 
+  nav a
+    margin-inline: 8px
+
+@media only screen and (min-width: 800px) and (max-width: 1098px) 
+  nav a
+    margin-inline: 0px
+
+@media (max-width: 1406px) and (min-width: 900px)
+  nav a
+    margin-inline: -2px
+    font-size: 13px
+
+.hover:hover
+  cursor:pointer

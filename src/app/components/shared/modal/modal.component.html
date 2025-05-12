@@ -1,0 +1,10 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-button" (click)="closeModal()">X</button>
+    <div style="display: none;" class="image-container">
+      <img [src]="imageSrc" alt="Icon">
+    </div>
+    <ng-content></ng-content>
+    <button [style.backgroundColor]="textColor" class="ok-button" (click)="closeModal()">{{buttontitle == '' ? 'OK' : buttontitle}}</button>
+  </div>
+</div>

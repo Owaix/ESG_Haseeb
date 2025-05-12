@@ -1,0 +1,24 @@
+.reason-list-item
+  opacity: 0
+  transition: 0.5s
+
+  h3
+    font-size: 2rem
+    font-weight: 400
+    color: var(--dark-blue)
+    margin-block: 2rem
+
+  p
+    line-height: 1.5rem
+    color: var(--grayish-blue)
+    margin-block: 0
+
+@media screen and (max-aspect-ratio: 1)
+  .reason-list-item
+    h3
+      font-size: 1.5rem
+
+  @media screen and (max-width: 767px)
+    .reason-list-item
+      h3
+        font-size: 1.2rem

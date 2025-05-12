@@ -1,0 +1,132 @@
+.content {
+  min-width: 60%;
+  display: flex;
+  margin-left: 10%;
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 10vw;
+
+    &-social {
+      display: flex;
+      justify-content: space-between;
+
+      svg {
+        cursor: pointer;
+
+        path {
+          transition: 0.3s;
+        }
+
+        &:hover {
+          fill: green;
+        }
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+
+    div {
+      margin-right: 15vw;
+      line-height: 5px;
+
+      a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 1.5rem;
+        transition: 0.3s;
+        letter-spacing: 0px;
+
+        &:hover {
+          color: var(--lime-green);
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.copyrights {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+
+  p {
+    margin-bottom: 0;
+    color: var(--grayish-blue);
+  }
+}
+
+#challenger {
+  position: absolute;
+  bottom: 0;
+  right: 10rem;
+  color: var(--grayish-blue);
+}
+
+@media screen and (max-aspect-ratio: 1) {
+  .content {
+    text-align: center;
+    min-width: unset;
+    display: unset;
+
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
+      width: 84%important;
+
+      &-social {
+        margin-block: 2rem;
+
+        svg {
+          margin-inline: 0.5rem;
+        }
+      }
+    }
+
+    nav {
+      display: unset;
+
+      div {
+        margin-right: 0;
+
+        &:first-child {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .copyrights {
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  #challenger {
+    width: 100%;
+    right: unset;
+    left: 0;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+.text {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  box-sizing: border-box;
+}

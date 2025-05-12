@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap')
+
+@font-face 
+    font-family: 'OpenSans-Bold'
+    src: url('assets/font/OpenSans-Bold.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-family: 'OpenSans-Italic'
+    src: url('assets/font/OpenSans-Italic.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-family: 'OpenSans-Light'
+    src: url('assets/font/OpenSans-Light.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal  
+
+@font-face 
+    font-family: 'OpenSans-Medium'
+    src: url('assets/font/OpenSans-Medium.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@font-face 
+    font-family: 'OpenSans-Regular'
+    src: url('assets/font/OpenSans-Regular.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal 
+
+:root
+  --dark-blue: hsl(233, 26%, 24%)
+  --lime-green: hsl(136, 65%, 51%)
+  --bright-cyan: hsl(192, 70%, 51%)
+
+  --grayish-blue: hsl(233, 8%, 62%)
+  --ligh-grayish-blue: hsl(220, 16%, 96%)
+  --very-light-gray: hsl(0, 0%, 98%)
+
+body
+  min-height: 100vh
+  margin: 0
+  font-family: 'OpenSans-Regular' !important
+  overflow-x: hidden
+
+  h1  
+    font-family: 'OpenSans-bold' !important
+  p , label ,span
+    font-family: 'OpenSans-Regular' !important
+  h2 , a
+    font-family: 'OpenSans-Regular' !important
+    color:black 
+    letter-spacing: 2px
+
+  button
+    font-family: 'OpenSans-Regular' !important
+    border: none
+    padding: 1rem 2rem
+    background-color:#295263
+    border-radius: 2rem
+    color: var(--very-light-gray)
+    font-weight: 700
+    letter-spacing: 1px
+    transition: 0.3s
+
+  .tempstore
+    background-image: linear-gradient(to right, #00BEB6, #28DEDA)
+  .links
+    font-family: 'OpenSans-Regular' !important
+    border: none
+    padding: 1rem 2rem    
+    background-color:#295263
+    border-radius: 2rem
+    color: var(--very-light-gray)
+    font-weight: 700
+    letter-spacing: 1px
+    transition: 0.3s
+
+    &:hover
+      cursor: pointer
+      opacity: 0.5
+
+.btn 
+    color: white
+    background-color: #509787
+    text-decoration: none
+    margin-inline: 1rem
+    color: white
+    font-weight: bold
+    font-size: 1rem
+    position: relative
+    text-decoration: none
+    color: white
+    padding: 5px 30px 5px 30px

@@ -1,0 +1,111 @@
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 10%;
+    margin-top: 5%;
+  }
+  
+  .eye {
+    width: 31px;
+    margin-right: -78px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    border-color: #007BFF;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  /* Responsive adjustments for tablets and smaller screens */
+  @media (max-width: 600px) {
+    .login-container {
+      padding: 10px;
+    }
+  
+    .eye {
+      margin-right: -18px;
+    }
+  
+    h2 {
+      font-size: 1.5em;
+    }
+  
+    input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .error {
+      font-size: 12px;
+    }
+  }
+  
+  /* Additional adjustments for mobile screens (under 400px) */
+  @media (max-width: 400px) {
+    .login-container {
+      padding: 5px;
+      max-width: 90%;
+    }
+  
+    h2 {
+      font-size: 1.3em;
+    }
+  
+    input {
+      font-size: 14px;
+      padding: 10px;
+      width: 95%;
+    }
+  
+    label {
+      font-size: 0.9em;
+    }
+  
+    button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .error {
+      font-size: 12px;
+    }
+  }

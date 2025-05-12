@@ -1,0 +1,57 @@
+<div class="containers">
+  <div class="question-list" style="text-align: -webkit-center;margin-left: 2%;margin-top: 2%;">
+    <form (ngSubmit)="saveResponses()">
+      <h2 style="font-size: 28px;text-decoration: underline;">{{title}}</h2>
+      <div *ngFor="let question of questionsList;; let  i = index; let last = last"
+        [ngClass]="question.parent_id > 0 ? 'sub-question-item' : 'question-item'">
+        <!-- <input type=" hidden" id="report_id" [(ngModel)]="answers[question.id].report_id" name="report_id" /> -->
+        <label style="color: red;font-style: italic;">Question {{i +1}}
+          <img (mouseover)="showTooltip(question.note, $event)" (mouseout)="hideTooltip()" class="icon"
+            *ngIf="question.note" src="../../../../assets/images/i.png">
+        </label>
+        <br>
+        <label [for]="'question'">{{ question.question }}</label>
+        <div *ngIf="question.type == 'co'" style="margin-top: 10px;margin-left: 10px;">
+          <label style="font-weight: 100;" *ngFor="let option of question.options;" class="custom-radio">
+            <input (change)="radio_Change(option.next_questions , question.id)" id="radio_{{option.id}}" type="radio"
+              name="radio_{{question.id}}" [(ngModel)]="question.user_answer" [value]="option.id">
+            <span class="radio"></span>
+            {{option.answer}}
+          </label>
+        </div>
+        <div *ngIf="question.type == 'cm'" style="margin-top: 10px;margin-left: 10px;">
+          <label *ngFor="let option of question.options;" class="custom-checkbox">
+            <input [checked]="isChecked(option.id , question.user_answer)"
+              (change)="checkbox_Change(question.id, option)" type="checkbox" name="checkbox_{{option.id}}"
+              id="checkbox_{{option.id}}">
+            <span class="checkbox"></span>
+            <span>{{option.answer}}</span>
+          </label>
+        </div>
+        <!-- <input *ngIf="question.type == 'ui'" type="text" id="input_{{question.id}}" [(ngModel)]="question.user_answer"
+          name="input_{{question.id}}" required /> -->
+        <textarea *ngIf="question.type == 'ui'" id="input_{{question.id}}" [(ngModel)]="question.user_answer"
+          name="input_{{question.id}}" class="dynamic-textbox" (input)="adjustHeights($event)" rows="1"></textarea>
+
+        <!-- <hr *ngIf="!last"> -->
+      </div>
+      <div class="custom-tooltip" *ngIf="tooltipVisible" [style.top.px]="tooltipPosition.y"
+        [style.left.px]="tooltipPosition.x">
+        {{ tooltipText }}
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <button (click)="back()" class="btn" style="margin-left: 10px;" type="button">Back</button>
+        <button class="btn" style="margin-right: 10px;" type="submit">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<app-modal *ngIf="isModalOpen" [errortitle]="errortitle" (close)="closeModal()">
+  <h2>{{errortitle}}</h2>
+  <p style="font-size: 19px;">{{errormsg}}</p>
+</app-modal>

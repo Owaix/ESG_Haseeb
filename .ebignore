@@ -1,0 +1,24 @@
+# Node modules and temp files
+node_modules/
+tmp/
+temp/
+*.log
+
+# Angular build output (will be rebuilt in Docker)
+dist/
+
+# Git and editor stuff
+.git/
+.gitignore
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Local AWS/EB config
+.elasticbeanstalk/

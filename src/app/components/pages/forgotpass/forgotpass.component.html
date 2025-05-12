@@ -1,0 +1,29 @@
+<section id="login">
+    <div>
+        <div class="login-container">
+            <div style="text-align: center;">
+                <img style="width: 40%;" src="../../../../assets/images/loginico.png" alt="Logo" class="logo" />
+            </div>
+            <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+                <h2>Forgot your password</h2>
+                <h2 style="    font-size: 17px;color: #7f8181;">We'll email you a link to reset your password</h2>
+
+                <div class="input-group">
+                    <input placeholder="Work email address" type="text" id="email" name="email" [(ngModel)]="email"
+                        required #emailField="ngModel" />
+                    <div *ngIf="emailField.invalid && emailField.touched" class="error">
+                        Email is required
+                    </div>
+                </div>
+                <div style="text-align: center;margin-top: 10%;">
+                    <button type="submit" class="btn" [disabled]="loginForm.invalid">Send email</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<app-modal *ngIf="isModalOpen" [errortitle]="errortitle" [redirectUrl]="redirectUrl" (close)="closeModal()">
+    <h2>{{errortitle}}</h2>
+    <p style="font-size: 19px;">{{errormsg}}</p>
+</app-modal>

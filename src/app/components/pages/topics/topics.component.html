@@ -1,0 +1,63 @@
+<div class="container">
+    <div>
+        <h1 style="text-align: center;"> ESG Report <br> Material Topics </h1>
+    </div>
+    <div style="cursor: pointer;" (click)="subtopics(card.id)" *ngFor="let card of cards" class="responsive-div">
+        <div class="topic-box">
+            <h3>{{ card.name }}</h3>
+        </div>
+        <div class="status">
+            <span *ngIf="card.status == 'Pending'" class="status-inline">
+                <img style="width: 24px;" src="../../../../assets/images/process.png" alt="Process Icon">
+                <span style="color: #5f5fb6;"> {{ card.status }}</span>
+            </span>
+            <span *ngIf="card.status == 'Not Started'" class="status-inline">
+                <img style="width: 24px;" src="../../../../assets/images/reject.png" alt="Process Icon">
+                <span style="color: #de6666;"> {{ card.status }}</span>
+            </span>
+            <span *ngIf="card.status == 'Completed'" class="status-inline">
+                <img style="width: 24px;" src="../../../../assets/images/complete.png" alt="Process Icon">
+                <span style="color: #86bd86;"> {{ card.status }}</span>
+            </span>
+            <span *ngIf="card.status == 'In Progress'" class="status-inline">
+                <img style="width: 24px;" src="../../../../assets/images/hold.png" alt="Process Icon">
+                <span style="color: #e0aa33;"> {{ card.status }}</span>
+            </span>
+        </div>
+    </div>
+    <button (click)="review()" class="btn">Review</button>
+    <br>
+    <div *ngIf="reports.length > 0">
+        <h1 style="text-align: center;"> Past History Report </h1>
+    </div>
+    <div *ngFor="let report of reports; let i = index;" class="responsive-div">
+        <div class="topic-box">
+            <h3>{{ report.report_ref_no }}</h3>
+        </div>
+        <div>
+            <span style="color: red;">{{report.report_score}}</span>
+        </div>
+        <div class="status">
+            <span class="status-inline">
+                <span style="color: #5f5fb6;"> {{ report.updatedAt | date:'d-MMM-y' }}</span>
+            </span>
+        </div>
+
+        <!-- Show different content based on 'is_generated' status -->
+        <ng-container *ngIf="report.is_generated; else generatingTemplate">
+            <a class="edit-button" [href]="report.file_url">Read Report
+            </a>
+        </ng-container>
+
+        <!-- Template to show when report is still generating -->
+        <ng-template #generatingTemplate>
+            <span class="waiting-text">Please wait, report is being generated...</span>
+        </ng-template>
+    </div>
+
+</div>
+
+<app-modal *ngIf="isModalOpen" [errortitle]="errortitle" (close)="closeModal()">
+    <h2>{{errortitle}}</h2>
+    <p style="font-size: 19px;">{{errormsg}}</p>
+</app-modal>

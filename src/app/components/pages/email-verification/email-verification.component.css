@@ -1,0 +1,49 @@
+.signup-success {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  background-color: #ffffff;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'OpenSans-Regular' !important
+}
+
+.logo {
+  width: 80%; /* Responsive logo size */
+  max-width: 100px; /* Max size */
+  margin-bottom: 20px;
+}
+
+.header {
+  color: #4CAF50;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.message {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.email-message {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .header {
+      font-size: 20px; /* Smaller header on mobile */
+  }
+  
+  .message {
+      font-size: 16px; /* Smaller message on mobile */
+  }
+  
+  .email-message {
+      font-size: 12px; /* Smaller email message on mobile */
+  }
+}

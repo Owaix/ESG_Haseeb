@@ -1,0 +1,17 @@
+<img class="menu" #menu style="width: 25px;" (click)="showMenu()" src="../../../../assets/images/main-menu.png" alt="Menu">
+<img #close style="width: 25px;" (click)="closeMenu()" src="../../../../assets/images/x-button.png" alt="Close Menu">
+<a routerLink="/">
+  <div class="logo"></div>
+  <!-- <img src="../../assets/images/ESGbutton-22.png" alt="Logo"> -->
+</a>
+<nav #nav>
+  <a routerLink="" fragment="hero" (click)="onNavItemClick()">HOME</a>
+  <a routerLink="" fragment="reason" (click)="onNavItemClick()">PRODUCT</a>
+  <a routerLink="" fragment="articles" (click)="onNavItemClick()">PRICING</a>
+  <a routerLink="" fragment="contact" class="hover" (click)="scrollToBottom()">CONTACT US</a>
+  <a *ngIf="isLoggedIn" routerLink="/topics" (click)="onNavItemClick()">MY ACCOUNT</a>
+  <a *ngIf="!isLoggedIn" style="color: white ;  " routerLink="/signup" class="links" (click)="onNavItemClick()">SIGN
+    UP</a>
+  <a *ngIf="!isLoggedIn" style="color: white ; " routerLink="/login" class="links" (click)="onNavItemClick()">LOG IN</a>
+  <a *ngIf="isLoggedIn" (click)="logout(); onNavItemClick()" style="color: white ; " href="#" class="links">LOG OUT</a>
+</nav>
