@@ -18,7 +18,7 @@ section
   display: grid
   grid-template-columns: calc(46vw - 10rem ) 50vw
   align-items: center
-  background-image: url('../../../../assets/images/bg.png')
+  background-image: url('../../../../assets/images/bg01a.png')
   background-size: cover
   background-position: bottom
   background-repeat: no-repeat
@@ -67,10 +67,11 @@ section
   @media (max-width: 768px)
     flex-direction: column
     padding: 20px
+    background-image: url('../../../../assets/images/bg02-mobile.png')
 
   .about-image
     flex: 1 1 400px
-
+    
     img
       max-width: 100%
       border-radius: 8px
@@ -168,7 +169,7 @@ section
   #hero
     padding-inline: 0
     display: flex
-    height: 100vh
+    height: 190vh
     background-image: url('../../../../assets/images/bg01.png')
     background-size: cover
     background-position: bottom
@@ -225,10 +226,13 @@ section
     #hero
       .content
         padding-block: 3rem
-        padding-inline: 1.5rem
+        padding-inline: 3rem
+        padding-top: 0 !important
+        margin-top: -385px
 
         h1
-          font-size: 2rem
+          font-size: 2.6rem
+          line-height: 44px
 
       .images
         min-height: 50vh
