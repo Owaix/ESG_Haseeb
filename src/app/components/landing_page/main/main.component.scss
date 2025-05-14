@@ -1,6 +1,6 @@
 .how-to-use-section {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   background-color: #EDF4EE;
   margin-top: -75px;
 
@@ -70,8 +70,55 @@
   }
 }
 
+.mid-section{
+  background-image: url('../../../../assets/images/banner-02.png');
+  background-size: 100% 100%;
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 40px;
+  position: relative;
+}
+.mid-section h2{
+  max-width: 950px;
+  text-align: center;
+  line-height: 30px;
+}
+.block{
+  display: block;
+}
+
 @media only screen and (max-width:767px) {
 
-  
-  
+  .about-image img{
+    display: none;
+  }
+  .about-section{
+    flex-direction: row;
+    padding: 0 30px;
+    background-image: url(../../../../assets/images/bg02-mobile.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .about-text{
+    margin-bottom: 500px;
+  }
+
+  .about-text{
+    font-size: 3rem;
+  }
+  .about-text h3{
+    font-size: 1.4rem;
+  }
+  .about-text p{
+    font-size: 18px;
+  }
+
+
 }
