@@ -75,13 +75,13 @@
 
 @media screen and (max-aspect-ratio: 1) {
   .content {
-    text-align: center;
+    text-align: left;
     min-width: unset;
     display: unset;
 
     .icons {
       display: flex;
-      align-items: center;
+      align-items: baseline;
       justify-content: center;
       margin-right: 0;
       width: 84%important;
@@ -129,4 +129,16 @@
   border: 1px solid #ccc;
   border-radius: 25px;
   box-sizing: border-box;
+}
+
+
+@media only screen and (max-width:767px){
+
+  .content .icons{
+    margin-bottom: 25px;
+  }
+  .footer-contactus{
+    margin-top: 25px;
+    padding-top: 35px;
+  }
 }
