@@ -22,10 +22,12 @@ img
 @media (max-width: 768px)
   .logo
     background-image: url('/assets/images/ESGbutton-22.png')
-    background-position: right
+    background-position: left
+    width: 80px
     
   .menu
-    display: block
+    display: none
+
 
 nav
   display: none // Hide by default
@@ -130,7 +132,10 @@ nav
 
 @media (min-width: 768px)
   nav
-    display: flex 
+    display: flex
+
+  
+
 
 @media only screen and (min-width: 1099px) and (max-width: 1266px) 
   nav a
@@ -147,3 +152,12 @@ nav
 
 .hover:hover
   cursor:pointer
+
+@media(min-width:768px) and (max-width:991px)
+  nav a
+      margin-inline: 5px
+      padding: 5px 10px 5px 10px
+      font-size: 13px
+  
+  nav .login-btn
+      padding: 5px 20px 5px 20px  

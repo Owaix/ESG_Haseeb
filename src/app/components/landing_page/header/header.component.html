@@ -12,6 +12,6 @@
   <a *ngIf="isLoggedIn" routerLink="/topics" (click)="onNavItemClick()">MY ACCOUNT</a>
   <a *ngIf="!isLoggedIn" style="color: white ;  " routerLink="/signup" class="links" (click)="onNavItemClick()">SIGN
     UP</a>
-  <a *ngIf="!isLoggedIn" style="color: white ; " routerLink="/login" class="links" (click)="onNavItemClick()">LOG IN</a>
-  <a *ngIf="isLoggedIn" (click)="logout(); onNavItemClick()" style="color: white ; " href="#" class="links">LOG OUT</a>
+  <a *ngIf="!isLoggedIn" style="color: white ; " routerLink="/login" class="links login-btn" (click)="onNavItemClick()">LOG IN</a>
+  <a *ngIf="isLoggedIn" (click)="logout(); onNavItemClick()" style="color: white ; " href="#" class="links login-btn">LOG OUT</a>
 </nav>
