@@ -6,17 +6,17 @@ section
   width: 230px
 
 .section 
-    background-image: url('../../../../assets/images/bg1.png')
+    background-image: url('../../../../assets/images/bg1-footer.png')
     background-size: cover
-    padding-bottom: 60%
+    padding-bottom: 44%
     background-position: top
-    margin-bottom: -32%
+    margin-bottom: -20%
 
 
 #hero
   padding-left: 10rem
   display: grid
-  grid-template-columns: calc(46vw - 10rem ) 50vw
+  grid-template-columns: calc(50vw - 10rem ) 50vw
   align-items: center
   background-image: url('../../../../assets/images/bg01a.png')
   background-size: cover
@@ -24,22 +24,24 @@ section
   background-repeat: no-repeat
   height: 129vh
   margin-top: -79px
+  background-color:#EDF4EE
 
   .content
     h1
-      font-size: 4.2rem
+      font-size: 3.4rem
       font-weight: 600
-      line-height: 4.75rem
+      line-height: 3.4rem
       color: black
       margin-block: 0
+      margin-bottom:50px
     span
       font-family: 'OpenSans-bold' !important 
       color : #509787
     p
-      line-height: 2.3rem
-      color: black
-      margin-block: 1rem
-      font-size: 1.7rem
+      line-height: 1.9rem
+      color: #394A58
+      margin-block: 2rem
+      font-size: 1.4rem
       font-weight: lighter
 
   .images
@@ -62,10 +64,10 @@ section
   display: flex
   flex-wrap: wrap
   align-items: flex-start
-  padding: 40px 20px
+  padding: 70px 20px
   max-width: 1200px
   margin: auto
-  gap: 40px
+  gap: 50px
 
   @media (max-width: 768px)
     flex-direction: column
@@ -82,9 +84,10 @@ section
 
   .about-text
     flex: 1 1 500px
+        margin-left: 15px
 
     h1
-      font-size: 4.2rem
+      font-size: 3.5rem
       margin-bottom: 10px
       font-weight:bold
       margin-top: 0
@@ -96,15 +99,15 @@ section
     h3
       font-style: italic
       font-weight: bold
-      font-size: 2.5rem
-      margin-bottom: 20px
+      font-size: 2rem
+      margin-bottom: 10px
       margin-top:10px
       color:#203243
 
     p
       margin-bottom: 15px
-      font-size: 1.7rem
-      line-height: 1.2
+      font-size: 1.3rem
+      line-height: 1.4
 
 
 #reason
@@ -281,9 +284,11 @@ $line-length: 120% // Length of the crossing line (adjust as needed)
 .price-container
   position: relative
   display: inline-block // Allows positioning of the pseudo-element
+  margin-top: 25px
+  margin-bottom: 20px
 
   .price
-    font-size: 43px
+    font-size: 70px
     font-weight: bold
     font-family: 'OpenSans-Regular' !important
     color: white

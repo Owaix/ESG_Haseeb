@@ -28,23 +28,24 @@
       text-align: center;
 
       .step-icon {
-        height: 140px;
+        height: 100px;
         margin-bottom: 1rem;
       }
 
       .step-title {
-        font-size: 2.5rem;
+        font-size: 1.6rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
-        color: #203243;
+        color: #1F3240;
         line-height: 1.1;
+        padding: 0 30px;
       }
 
       .step-text {
-        font-size: 1.7rem;
+        font-size: 1.1rem;
         color: #555;
         font-weight: lighter;
-        line-height: 1.1;
+        line-height: 1.2;
       }
     }
   }
@@ -65,7 +66,16 @@
 
 
 .section-header {
-  font-size: 4.2rem;
+  font-size: 3.5rem;
+  margin-bottom: 120px;
+
+  span {
+    color: #2c947f !important;
+    font-family: "OpenSans-bold" !important
+  }
+}
+.section-header2 {
+  font-size: 3.5rem;
   margin-bottom: 40px;
 
   span {
@@ -73,6 +83,7 @@
     font-family: "OpenSans-bold" !important
   }
 }
+
 
 .mid-section{
   background-image: url('../../../../assets/images/banner-02.png');
@@ -86,7 +97,7 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 3.57rem;
+  font-size: 1.8rem;
   position: relative;
 }
 .mid-section h2{
@@ -99,6 +110,10 @@
   display: block;
 }
 
+p.mobile-white {
+  max-width: 550px;
+  margin: 25px auto;
+}
 @media only screen and (max-width:767px) {
 
   .about-image img{
