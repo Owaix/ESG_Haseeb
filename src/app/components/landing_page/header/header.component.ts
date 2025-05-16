@@ -28,6 +28,7 @@ export class Header {
   }
 
   protected showMenu() {
+    if (window.innerWidth > 768) return;
     if (this.nav && this.menu && this.close) {
       this.nav.nativeElement.style.opacity = '1';
       this.nav.nativeElement.style.transform = 'translate(-50%, 4.5rem)';
@@ -38,6 +39,7 @@ export class Header {
   }
 
   protected closeMenu() {
+    if (window.innerWidth > 768) return;
     if (this.nav && this.menu && this.close) {
       this.nav.nativeElement.style.opacity = '';
       this.nav.nativeElement.style.transform = '';
