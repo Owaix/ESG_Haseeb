@@ -76,7 +76,8 @@
 }
 .section-header2 {
   font-size: 3.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  line-height: 55px;
 
   span {
     color: #2c947f !important;
@@ -123,8 +124,9 @@ p.mobile-white {
     flex-direction: row;
     padding: 0 30px;
     background-image: url(../../../../assets/images/bg02-mobile.png);
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: top center;
   }
   .about-text{
     margin-bottom: 650px;
@@ -172,14 +174,15 @@ p.mobile-white {
     flex-direction: row-reverse !important;
 }
 #articles{
-  margin-top: 150px;
+  margin-top: 250px;
 }
 #articles .section-header{
-  margin-top: -130px !important;
+  margin-top: -255px !important;
   margin-bottom: 120px !important; 
 }
 #articles .section-header span{
   color: #509787 !important;
+  display: block;
 }
 .price-container{
   margin: 15px 0 !important;
@@ -192,15 +195,20 @@ p.mobile-white {
 }
 
 .section{
-  height: 1200px !important;
+  height: 1400px !important;
 }
+.how-to-use-section .step-title{
+  padding: 0 0px !important;
+}
+
+
 
 }
 
 @media (min-width:768px) and (max-width:991px){
   #hero{
     padding-left: 5rem;
-    margin-top: 0;
+    padding-top: 120px;
     display: block;
   }
 

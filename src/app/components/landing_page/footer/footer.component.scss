@@ -78,6 +78,7 @@
     text-align: left;
     min-width: unset;
     display: unset;
+    margin-left: 0;
 
     .icons {
       display: flex;
@@ -129,6 +130,10 @@
   border: 1px solid #ccc;
   border-radius: 25px;
   box-sizing: border-box;
+}
+
+.font-bold{
+  font-weight: bold;
 }
 
 
