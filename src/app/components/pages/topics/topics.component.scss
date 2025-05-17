@@ -126,7 +126,21 @@ h2 {
   align-items: center;
   border-bottom: 1px solid #ddd;
   flex-wrap: wrap;
+
+  &:hover {
+    background-color: #e5e9eb;
+    cursor: pointer;
+  }
+
+  >div {
+    background-color: transparent;
+  }
+
+  &:hover>div {
+    background-color: #e5e9eb;
+  }
 }
+
 
 .row-cell {
   flex: 1;
