@@ -132,17 +132,18 @@
   box-sizing: border-box;
 }
 
-.font-bold{
+.font-bold {
   font-weight: bold;
 }
 
 
-@media only screen and (max-width:767px){
+@media only screen and (max-width:767px) {
 
-  .content .icons{
+  .content .icons {
     margin-bottom: 25px;
   }
-  .footer-contactus{
+
+  .footer-contactus {
     margin-top: 25px;
     padding-top: 35px;
   }
