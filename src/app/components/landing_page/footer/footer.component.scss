@@ -147,3 +147,27 @@
     padding-top: 35px;
   }
 }
+@media (min-width:768px) and (max-width:1199px){
+    .content{
+          margin-left: 0 !important;
+          margin-top: 100px;
+        }
+        .content nav div{
+          margin-right: 0vw !important;
+          line-height: normal;
+          padding: 10px; 
+        }
+        .content .icons{
+          margin-right: 0;
+          margin-left: 25px;
+        }
+        .content nav a{
+          margin-bottom: 0.5rem !important;
+        }
+        .content .icons img{
+          width: 150px;
+        }
+
+
+
+  }

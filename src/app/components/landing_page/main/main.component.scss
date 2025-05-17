@@ -233,11 +233,63 @@ p.mobile-white {
 
 }
 
-@media (min-width:768px) and (max-width:991px) {
+@media (min-width:768px) and (max-width:1199px) {
   #hero {
-    padding-left: 5rem;
-    padding-top: 120px;
-    display: block;
+    padding-left: 3rem;
+    padding-top: 20px;
+    grid-template-columns: calc(75vw - 10rem) 50vw;
+    background-size: contain;
+    background-position: center center;
+  }
+  .about-image{
+    display: none;
+  }
+  .about-section{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex-direction: row;
+  }
+  .about-section .about-text{
+    margin-bottom: 650px;
+  }
+  .steps-container{
+    gap: 2rem !important;
+    flex-wrap: nowrap !important;
+  }
+  .step .step-title{
+    padding: 0 15px !important;
+  }
+  .step .step-text{
+    font-size: 1rem !important;
+    line-height: 1.2 !important;
+  }
+  .step .step-icon{
+    height: 80px !important;
+    margin-bottom: 0rem !important;
+  }
+  .section-header{
+    margin-bottom: 15px;
+    margin-top: 0 !important;
+  }
+  .section{
+    padding-bottom: 46%;
+    background-position: center center;
+    margin-bottom: -50%;
+    margin-top: 50px;
+  }
+  footer{
+    padding-top: 75px;
+  }
+  .content{
+    margin-left: 0 !important;
+  }
+  .content .icons{
+    margin-right: 50px;
+  }
+  header{
+    margin-left: 30px !important;
+    padding-block: 0;
   }
 
 }
