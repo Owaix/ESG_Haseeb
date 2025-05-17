@@ -25,34 +25,35 @@
             </span>
         </div>
     </div>
-    <button (click)="review()" class="btn">Review</button>
+    <button (click)="review()" class="btn mycolor">Review</button>
     <br>
     <div *ngIf="reports.length > 0">
         <h1 style="text-align: center;"> Past History Report </h1>
     </div>
-    <div *ngFor="let report of reports; let i = index;" class="responsive-div">
-        <div class="topic-box">
-            <h3>{{ report.report_ref_no }}</h3>
-        </div>
-        <div>
-            <span style="color: red;">{{report.report_score}}</span>
-        </div>
-        <div class="status">
-            <span class="status-inline">
-                <span style="color: #5f5fb6;"> {{ report.updatedAt | date:'d-MMM-y' }}</span>
-            </span>
-        </div>
 
-        <!-- Show different content based on 'is_generated' status -->
-        <ng-container *ngIf="report.is_generated; else generatingTemplate">
-            <a class="edit-button" [href]="report.file_url">Read Report
-            </a>
-        </ng-container>
-
-        <!-- Template to show when report is still generating -->
-        <ng-template #generatingTemplate>
-            <span class="waiting-text">Please wait, report is being generated...</span>
-        </ng-template>
+    <div class="table-container">
+        <div class="table-header">
+            <div class="header-cell"></div>
+            <div class="header-cell">Date Generated</div>
+            <div class="header-cell">Report Score</div>
+            <div class="header-cell">Action</div>
+        </div>
+        <div class="table-body">
+            <div class="table-row" *ngFor="let report of reports">
+                <div class="row-cell label">ESG Report</div>
+                <div class="row-cell"> {{ report.updatedAt | date:'d-MMM-y' }}</div>
+                <div class="row-cell">{{ report.report_score }}</div>
+                <ng-container *ngIf="report.is_generated; else generatingTemplate">
+                    <div class="row-cell">
+                        <a class="download-btn" [href]="report.file_url">Download
+                        </a>
+                    </div>
+                </ng-container>
+                <ng-template #generatingTemplate>
+                    <span class="waiting-text">Report is generating</span>
+                </ng-template>
+            </div>
+        </div>
     </div>
 
 </div>
