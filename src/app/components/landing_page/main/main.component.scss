@@ -34,7 +34,7 @@
 
       .step-title {
         font-size: 1.6rem;
-        font-weight: bold;
+        font-family: "OpenSans-bold";
         margin-bottom: 0.5rem;
         color: #1F3240;
         line-height: 1.1;
@@ -74,6 +74,7 @@
     font-family: "OpenSans-bold" !important
   }
 }
+
 .section-header2 {
   font-size: 3.5rem;
   margin-bottom: 10px;
@@ -86,7 +87,7 @@
 }
 
 
-.mid-section{
+.mid-section {
   background-image: url('../../../../assets/images/banner-02.png');
   background-size: 100% 100%;
   width: 100%;
@@ -101,13 +102,15 @@
   font-size: 1.8rem;
   position: relative;
 }
-.mid-section h2{
+
+.mid-section h2 {
   max-width: 950px;
   text-align: center;
   line-height: 1.1;
   font-style: italic;
 }
-.block{
+
+.block {
   display: block;
 }
 
@@ -115,98 +118,123 @@ p.mobile-white {
   max-width: 550px;
   margin: 25px auto;
 }
+
 @media only screen and (max-width:767px) {
 
-  .about-image img{
+  .about-image img {
     display: none;
   }
-  .about-section{
+
+  .about-section {
     flex-direction: row;
     padding: 0 30px;
     background-image: url(../../../../assets/images/bg02-mobile.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-  }
-  .about-text{
-    margin-bottom: 650px;
+
+    .about-text {
+      margin-bottom: 650px;
+    }
+
+    .about-text h1 {
+      font-size: 2.5rem;
+    }
+
+    .about-text h3 {
+      font-size: 1.4rem;
+    }
+
+    .about-text p {
+      font-size: 18px;
+    }
   }
 
-  .about-text{
-    font-size: 3rem;
-  }
-  .about-text h3{
-    font-size: 1.4rem;
-  }
-  .about-text p{
-    font-size: 18px;
-  }
-  .mid-section{
+  .mid-section {
     background-image: url('../../../../assets/images/banner-02-mobile.png');
     background-size: 100% 100%;
     font-size: 20px;
     margin-top: -70px;
     padding-top: 80px;
     padding-bottom: 110px;
+
+    h2 {
+      line-height: 38px;
+    }
   }
-  .mid-section h2{
-    line-height: 38px;
+
+  .how-to-use-section {
+    .steps-container .step {
+      max-width: none !important;
+      text-align: left !important;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
   }
-  .how-to-use-section  .steps-container .step{
-    max-width: none !important;
-    text-align: left !important;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin: 20px;
-  }
-  .steps-container{
+
+  .steps-container {
     justify-content: space-between !important;
     gap: 0 !important;
     margin-bottom: 1rem !important;
     padding-top: 20px !important;
   }
-  .steps-container .step .step-icon{
+
+  .steps-container .step .step-icon {
     height: 75px !important;
     margin-bottom: 0 !important;
   }
+
   .steps-container .step:nth-child(2) {
     flex-direction: row-reverse !important;
-}
-#articles{
-  margin-top: 250px;
-}
-#articles .section-header{
-  margin-top: -255px !important;
-  margin-bottom: 120px !important; 
-}
-#articles .section-header span{
-  color: #509787 !important;
-  display: block;
-}
-.price-container{
-  margin: 15px 0 !important;
-}
-#articles p.mobile-white{
-  color: #fff !important;
-}
-#articles span.mobile-white{
-  color: #fff !important;
+  }
+
+  #articles {
+    margin-top: 250px;
+  }
+
+  #articles .section-header {
+    margin-top: -255px !important;
+    margin-bottom: 120px !important;
+    font-size: 2.5rem;
+  }
+
+  #articles .section-header span {
+    color: #509787 !important;
+    display: block;
+  }
+
+  .price-container {
+    margin: 15px 0 !important;
+  }
+
+  #articles p.mobile-white {
+    color: #fff !important;
+  }
+
+  #articles span.mobile-white {
+    color: #fff !important;
+  }
+
+  .section {
+    height: 1400px !important;
+  }
+
+  .how-to-use-section .step-title {
+    padding: 0 0px !important;
+  }
+
+
+
 }
 
-.section{
-  height: 1400px !important;
-}
-.how-to-use-section .step-title{
-  padding: 0 0px !important;
-}
-
-
-
-}
-
-@media (min-width:768px) and (max-width:991px){
-  #hero{
+@media (min-width:768px) and (max-width:991px) {
+  #hero {
     padding-left: 5rem;
     padding-top: 120px;
     display: block;
