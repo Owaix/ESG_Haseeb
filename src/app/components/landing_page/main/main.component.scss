@@ -119,21 +119,23 @@ p.mobile-white {
   margin: 25px auto;
 }
 
-.header-banner-mobile{
+.header-banner-mobile {
   display: none;
 }
+
 @media only screen and (max-width:767px) {
 
   .about-image img {
     display: none;
   }
 
-  .header-banner-mobile{
+  .header-banner-mobile {
     display: block;
   }
+
   .header-banner-mobile img {
     width: 100%;
-}
+  }
 
   .about-section {
     flex-direction: row;
@@ -163,7 +165,7 @@ p.mobile-white {
   .mid-section {
     background-image: url('../../../../assets/images/banner-02-mobile.png');
     background-size: 100% 100%;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: -70px;
     padding-top: 80px;
     padding-bottom: 110px;
@@ -239,7 +241,9 @@ p.mobile-white {
     padding: 0 0px !important;
   }
 
-
+  .responsive-iframe {
+    height: 300px !important;
+  }
 
 }
 
@@ -251,55 +255,67 @@ p.mobile-white {
     background-size: contain;
     background-position: center center;
   }
-  .about-image{
+
+  .about-image {
     display: none;
   }
-  .about-section{
+
+  .about-section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     flex-direction: row;
   }
-  .about-section .about-text{
+
+  .about-section .about-text {
     margin-bottom: 650px;
   }
-  .steps-container{
+
+  .steps-container {
     gap: 2rem !important;
     flex-wrap: nowrap !important;
   }
-  .step .step-title{
+
+  .step .step-title {
     padding: 0 15px !important;
   }
-  .step .step-text{
+
+  .step .step-text {
     font-size: 1rem !important;
     line-height: 1.2 !important;
   }
-  .step .step-icon{
+
+  .step .step-icon {
     height: 80px !important;
     margin-bottom: 0rem !important;
   }
-  .section-header{
+
+  .section-header {
     margin-bottom: 15px;
     margin-top: 0 !important;
   }
-  .section{
+
+  .section {
     padding-bottom: 46%;
     background-position: center center;
     margin-bottom: -50%;
     margin-top: 50px;
   }
-  footer{
+
+  footer {
     padding-top: 75px;
   }
-  .content{
+
+  .content {
     margin-left: 0 !important;
   }
-  .content .icons{
+
+  .content .icons {
     margin-right: 50px;
   }
-  header{
+
+  header {
     margin-left: 30px !important;
     padding-block: 0;
   }
-
 }
