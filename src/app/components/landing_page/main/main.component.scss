@@ -119,11 +119,21 @@ p.mobile-white {
   margin: 25px auto;
 }
 
+.header-banner-mobile{
+  display: none;
+}
 @media only screen and (max-width:767px) {
 
   .about-image img {
     display: none;
   }
+
+  .header-banner-mobile{
+    display: block;
+  }
+  .header-banner-mobile img {
+    width: 100%;
+}
 
   .about-section {
     flex-direction: row;
