@@ -2,7 +2,7 @@
     <div>
         <div class="login-container">
             <div style="text-align: center;">
-                <img style="width: 40%;" src="../../../../assets/images/loginico.png" alt="Logo" class="logo" />
+                <img style="width: 40%;" src="../../../../assets/images/logo2.png" alt="Logo" class="logo" />
             </div>
             <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
                 <h2>Log in to your account</h2>
@@ -36,12 +36,12 @@
                         Password must contain at least one number, one special character, and one letter
                     </div>
                 </div>
-                <a style="text-decoration: none;color: blue;" routerLink="/forgot">Forgot your password?</a>
+                <a style="text-decoration: none;color: #295263;" routerLink="/forgot">Forgot your password?</a>
                 <div style="text-align: center;margin-top: 10%;">
                     <button type="submit" class="btn" [disabled]="loginForm.invalid">Log in</button>
                 </div>
                 <div style="text-align: center;padding-top: 10%;">
-                    Don't have an account?<a routerLink="/signup" style="text-decoration: none;color: blue;    margin-left: 10px;">Sign up</a>
+                    Don't have an account?<a routerLink="/signup" style="text-decoration: none;color: #295263;    margin-left: 10px;">Sign up</a>
                 </div>
             </form>
         </div>
