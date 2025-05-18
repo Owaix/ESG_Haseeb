@@ -130,6 +130,10 @@ span.break-year {
 
 @media only screen and (max-width:767px) {
 
+  #hero{
+    height: auto !important;
+  }
+
   .about-image img {
     display: none;
   }
