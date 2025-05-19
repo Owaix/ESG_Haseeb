@@ -148,7 +148,7 @@
     padding-top: 35px;
   }
 }
-@media (min-width:768px) and (max-width:991ngpx){
+@media (min-width:768px) and (max-width:991px){
     .content{
           margin-left: 0 !important;
           margin-top: 100px;
@@ -168,7 +168,13 @@
         .content .icons img{
           width: 150px;
         }
-
+        .content nav div a{
+          line-height: 17px;
+        }
+        .content{
+          margin-top: 0;
+          margin-left: 5%;
+        }
 
 
   }

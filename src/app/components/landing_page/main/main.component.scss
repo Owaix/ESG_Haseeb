@@ -265,21 +265,29 @@ span.break-year {
     background-position: center center;
   }
 
-  .about-image {
-    display: none;
-  }
+
 
   .about-section {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 
   .about-section .about-text {
-    margin-bottom: 650px;
+    margin-bottom: 0px;
   }
-
+  .about-section .about-text h1{
+    font-size: 2.5rem;
+  }
+  .about-section .about-text h3{
+    font-size: 1rem;
+  }
+  .about-section .about-text p{
+    font-size: 1rem;
+  }
   .steps-container {
     gap: 2rem !important;
     flex-wrap: nowrap !important;
@@ -307,8 +315,11 @@ span.break-year {
   .section {
     padding-bottom: 46%;
     background-position: center center;
-    margin-bottom: -50%;
+    margin-bottom: -40%;
     margin-top: 50px;
+  }
+  .content{
+    margin-left: 5%;
   }
 
   footer {
@@ -327,7 +338,7 @@ span.break-year {
     margin-left: 30px !important;
     padding-block: 0;
   }
-
+  
 }
 
 

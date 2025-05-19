@@ -58,7 +58,7 @@ button:hover:not(:disabled) {
 /* Responsive adjustments for tablets and smaller screens */
 @media (max-width: 600px) {
   .login-container {
-    padding: 10px;
+    padding: 0px;
   }
 
   .eye {
@@ -82,8 +82,8 @@ button:hover:not(:disabled) {
 /* Additional adjustments for mobile screens (under 400px) */
 @media (max-width: 400px) {
   .login-container {
-    padding: 5px;
-    max-width: 90%;
+    padding: 0px;
+    max-width:85%;
   }
 
   h2 {
